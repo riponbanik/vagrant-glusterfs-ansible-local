@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
     sudo service sshd restart       
     sudo yum -y install net-tools
     sudo yum -y install telnet 
+    sudo yum -y install sshpass
   SHELL
   
   # We setup three nodes to be gluster hosts
@@ -41,8 +42,7 @@ Vagrant.configure("2") do |config|
            ansible.install        = true
            ansible.install_mode = "pip"
            ansible.version = "2.4.3.0"
-           ansible.become = true
-           ansible.become_user = "vagrant"      
+           ansible.become = true                
            ansible.limit          = "all" # or only "nodes" group, etc.
            ansible.inventory_path = "inventory"
        end 
