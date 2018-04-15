@@ -16,7 +16,7 @@ The followng plugings needs to be installed for vagrant.
 ## Build the cluster
 ```
 git clone https://github.com/riponbanik/vagrant-glusterfs-ansible-local.git
-cd vagrant-foreman-ansible
+cd vagrant-glusterfs-ansible-local
 vagrant up 
 ```
 ## Troubleshooting 
